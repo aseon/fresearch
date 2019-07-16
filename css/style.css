@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+}
+
+/* #0C4DA2 */
+.loading {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #0C4DA2;
+    color: #fff;
+    font-size: 50px;
+    z-index: 10000;
+    /* 이 값으로 레이어의 위치를 조정합니다. */
+}
+
+.container .fixed_box {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    /* width 100% = right, left: 0*/
+}
+
+.container .fixed_box .header {
+    width: 100%;
+    background: #fff;
+    height: 109px;
+    /* background: #dcdcdc; */
+}
+
+.container .fixed_box .header .upper {
+    width: 100%;
+    background-color: #888;
+}
+
+.container .fixed_box .header .GNB_sub {
+    width: 100%;
+    margin-top: 80px;
+    background: rgb(240, 240, 240);
+}
+
+.container .fixed_box .header .upper .login {
+    clear: both;
+    position: relative;
+    width: 1100px;
+    height: 25px;
+    margin: 0 auto;
+    /* .emblembox를 공중에 띄우기 위한 position: relative 추가 */
+}
+
+.container .fixed_box .header .upper .login ul {
+    float: right;
+    width: 220px;
+    border: 1px solid #111;
+    /* HTML login 1, 2, 3 항목에 맞게 변경 후 border:1px solid #111; 지우기  */
+}
+
+.container .fixed_box .header .upper .login li {
+    display: inline-block;
+    width: 32%;
+    /* 항목 3개라서 가로크기 32퍼씩 임시설정 */
+}
+
+.container .fixed_box .header .upper .login .emblembox {
+    position: absolute;
+    z-index: 9;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+}
+
+.container .fixed_box .header .upper .login .emblembox img {
+    width: 50px;
+    height: 50px;
+}
+
+.container .fixed_box .header .header_inner {
+    clear: both;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.container .fixed_box .header .header_inner .logo {
+    float: left;
+    width: 210px;
+    height: 80px;
+    /* 임시 로고에 맞게 사이즈 조정 로고 확정 후 width, height 조정 */
+}
+
+.container .fixed_box .header .header_inner .logo img {
+    width: 210px;
+    height: 80px;
+    /* 임시 로고에 맞게 사이즈 조정 로고 확정 후 width, height 조정 혹은 이미지 크기가 정확하다면 항목 삭제 */
+}
+
+/* GNB Default loot
+.container .fixed_box .header .header_inner #GNB
+편의상 #GNB로 표기
+*/
+#GNB {
+    float: right;
+    width: 890px;
+    height: 80px;
+    font-size: 0.875em;
+}
+
+#GNB>ul {
+    height: 80px;
+    text-align: right;
+    overflow: hidden;
+}
+
+#GNB>ul>li {
+    display: inline-block;
+}
+
+#GNB>ul>li>a {
+    display: block;
+    padding: 0 43px;
+    height: 80px;
+    line-height: 80px;
+    font-weight: 600;
+    background-color: #fff;
+    color: rgb(80, 80, 80);
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#GNB>ul>li>a.active {
+    color: #0C4DA2;
+    border-bottom: 2px solid #0C4DA2;
+}
+
+#GNB ul ul {
+    transition: background 300ms;
+}
+
+#GNB ul ul.active {
+    background-color: #dcdcdc;
+}
+
+#GNB ul ul a {
+    display: block;
+    padding: 3px 35px 3px 40px;
+    line-height: 40px;
+    font-weight: 400;
+    color: rgb(80, 80, 80);
+    transition: border 300ms;
+    text-align: center;
+}
+
+#GNB ul ul li:first-child a {
+    padding-top: 5px;
+}
+
+#GNB ul ul li:last-child a {
+    padding-bottom: 5px;
+}
+
+#GNB ul ul a:hover,
+#GNB ul ul a:focus {
+    font-weight: bold;
+    color: #0C4DA2;
+}
+
+/* bx-slider 플러그인 커스텀 */
+.bx-wrapper {
+    box-shadow: 0 0 0 transparent;
+    border: none;
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 60%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+.bx-wrapper .bx-pager {
+    bottom: 30px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #f1f1f1;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #f1f1f1;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #0c4da2;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: center;
+    width: 100%;
+}
+
+#content {
+    clear: both;
+    float: none;
+}
+
+
+/* 아래부터 임시 */
+#content .notice_area,
+#content .research_area,
+#content .report_area {
+    clear: both;
+    float: none;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+#content .notice_area div,
+#content .research_area div {
+    float: left;
+    border: 1px solid #000;
+}
+
+#content .notice_area div {
+    width: 50%;
+}
+
+#content .research_area div {
+    width: 33%;
+    height: 270px;
+}
+
+#content .report_area li {
+    display: inline-block;
+    border: 1px solid #000;
+    width: 214px;
+}
+
+#content .report_area li a {
+    display: block;
+}
