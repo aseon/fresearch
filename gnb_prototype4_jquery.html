@@ -20,8 +20,8 @@
 			function () {
 				$(this).children("a").addClass("active");
 				$(this).find("ul").addClass("active");
-				$(this).parent("ul").stop().animate({ height: 178 }, 300);
-				$(this).parents().find(".GNB_sub").stop().animate({ height: 96 }, 300);
+				$(this).parent("ul").stop().animate({ "height": 178 }, 300);
+				$(this).parents().find(".GNB_sub").stop().animate({ "height": 96 }, 300);
 				/* 마우스가 들어온다면 이벤트가 발생된다
 				GNB ul li 자식 a에게 active 를 addClass - 관련 css-style-126
 				GNB ul li 자식 중 ul을 찾아 active 를 addClass - 관련 css-style-135
@@ -33,8 +33,8 @@
 			function () {
 				$(this).children("a").removeClass("active");
 				$(this).find("ul").removeClass("active");
-				$(this).parent("ul").stop().animate({ height: 80 }, 300);
-				$(this).parents().find(".GNB_sub").stop().animate({ height: 0 }, 300);
+				$(this).parent("ul").stop().animate({ "height": 80 }, 300);
+				$(this).parents().find(".GNB_sub").stop().animate({ "height": 0 }, 300);
 				/* 마우스가 떠난다면 이벤트가 발생된다 
 				GNB ul li 자식 a에게 active를 removeClass css-style-126
 				GNB ul li 자식 중 ul을 찾아 active를 removeClass - 관련 css-style-135
@@ -46,14 +46,14 @@
 		$("#GNB > ul > li").focusin(function () {
 			$(this).children("a").addClass("active");
 			$(this).find("ul").addClass("active");
-			$(this).parent("ul").stop().animate({ height: 178 }, 300);
-			$(this).parents().find(".GNB_sub").stop().animate({ height: 142 }, 300);
+			$(this).parent("ul").stop().animate({ "height": 178 }, 300);
+			$(this).parents().find(".GNB_sub").stop().animate({ "height": 142 }, 300);
 		});
 		$("#GNB > ul > li").focusout(function () {
 			$(this).children("a").removeClass("active");
 			$(this).find("ul").removeClass("active");
-			$(this).parent("ul").stop().animate({ height: 80 }, 300);
-			$(this).parents().find(".GNB_sub").stop().animate({ height: 0 }, 300);
+			$(this).parent("ul").stop().animate({ "height": 80 }, 300);
+			$(this).parents().find(".GNB_sub").stop().animate({ "height": 0 }, 300);
 		});
 		//접근성을 위하여 tab키로 접근시 마우스로 접근한 것처럼 똑같이 나타나도록 작성한 스크립트
 		
@@ -220,42 +220,42 @@
 		</div>
 		<!-- 공지 끝 / 자유게시판 외 게시판 시작 -->
 		<div class="research_area">
-			<div class="playground">
-				<div class="pg_icon">
-					<img src="" alt="">
+			<div class="hot_board">
+				<div class="board_icon">
+					<img src="image_1.png" alt="자유게시판">
 				</div>
-				<div class="pg_text">
+				<div class="board_text">
 					<dl>
-						<dt></dt>
-						<dd></dd>
-						<dd></dd>
-						<a href=""></a>
+						<dt>자유게시판</dt>
+						<dd>자유게시판</dd>
+						<dd>임시내용입니다</dd>
+						<a href="">게시판 더보기  ></a>
 					</dl>
 				</div>
 			</div>
 			<div class="hot_search">
 				<div class="search_icon">
-					<img src="" alt="">
+					<img src="image_1.png" alt="리서치참여및제작">
 				</div>
 				<div class="search_text">
 					<dl>
-						<dt></dt>
-						<dd></dd>
-						<dd></dd>
-						<a href=""></a>
+						<dt>리서치참여/제작</dt>
+						<dd>리서치참여/제작</dd>
+						<dd>임시내용입니다</dd>
+						<a href="">리서치 더보기  ></a>
 					</dl>
 				</div>
 			</div>
 			<div class="hot_chart">
 				<div class="chart_icon">
-					<img src="" alt="">
+					<img src="image_1.png" alt="데이터베이스">
 				</div>
 				<div class="chart_text">
 					<dl>
-						<dt></dt>
-						<dd></dd>
-						<dd></dd>
-						<a href=""></a>
+						<dt>통계</dt>
+						<dd>통계</dd>
+						<dd>임시내용입니다</dd>
+						<a href="">통계 더보기  ></a>
 					</dl>
 				</div>
 			</div>
@@ -263,7 +263,11 @@
 		<!-- 게시판 끝 패널신청 시작 -->
 		<div class="ad_zone">
 			<div class="panel">
-				<a href=""><span></span></a>
+				<dl>
+					<dt>패널을 어쩌구</dt>
+					<dd>지금 저쩌구 해보세요</dd>
+					<a href="">신청하기</a>
+				</dl>
 			</div>
 		</div>
 		<!-- 패널 끝 / 간단 리서치 시작 -->

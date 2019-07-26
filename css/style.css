@@ -222,7 +222,6 @@ body {
 
 #content .notice_area,
 #content .research_area,
-#content .panel,
 #content .report_area {
     clear: both;
     float: none;
@@ -250,5 +249,100 @@ body {
 
 #content .notice_area .notice li,
 #content .notice_area .event li {
-    width:100%; height:40px; line-height:40px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* hot_으로 시작하는 div class > hot_search hot_chart hot_board */
+#content .research_area div[class^="hot_"] {
+    float: left;
+    width: 365px;
+    height: 170px;
+    border-top: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#content .research_area .hot_board {
+    border-left: 1px solid #dcdcdc;
+}
+
+/* _icon으로 끝나는 div class > search_icon chart_icon board_icon */
+#content .research_area div[class$="_icon"] {
+    display: inline-block;
+    width: 142px;
+    background: #0C4DA2;
+    /* vertical-align: middle; */
+}
+
+#content .research_area div[class$="_icon"] img {
+    width: 142px;
+
+}
+
+/* _text으로 시작하는 div class > search_text chart_text board_text */
+#content .research_area div[class$="_text"] {
+    display: inline-block;
+    width: 198px;
+
+}
+
+#content .research_area div[class$="_text"] dl {
+    display: block;
+    text-align: center;
+}
+
+#content .research_area div[class$="_text"] dl dt {
+    font-size: 18px;
+    font-weight: bold;
+    color: #505050;
+    margin: 9px 0;
+}
+
+#content .research_area div[class$="_text"] dl dd {
+    font-size: 15px;
+    color: #505050;
+    margin: 0 0 10px;
+    line-height: 12px;
+}
+
+#content .research_area div[class$="_text"] dl a {
+    display: block;
+    width: 70%;
+    padding: 4px 0;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0C4DA2;
+    background: #fff;
+    border: 2px solid #0C4DA2;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+#content .research_area div[class$="_text"] dl a:hover,
+#content .research_area div[class$="_text"] dl a:focus {
+    color: #fff;
+    background: #0C4DA2;
+}
+
+#content .ad_zone {
+    clear: both;
+    float: none;
+    height: 400px;
+    background-image: url(../ad.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#content .ad_zone .panel {
+    clear: both;
+    float: none;
+    width: 1100px;
+    height: 400px;
+    margin: 0 auto;
+
 }
