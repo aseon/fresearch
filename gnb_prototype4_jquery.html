@@ -20,8 +20,8 @@
 			function () {
 				$(this).children("a").addClass("active");
 				$(this).find("ul").addClass("active");
-				$(this).parent("ul").stop().animate({ height: 264 }, 300);
-				$(this).parents().find(".GNB_sub").stop().animate({ height: 185 }, 300);
+				$(this).parent("ul").stop().animate({ height: 178 }, 300);
+				$(this).parents().find(".GNB_sub").stop().animate({ height: 96 }, 300);
 				/* 마우스가 들어온다면 이벤트가 발생된다
 				GNB ul li 자식 a에게 active 를 addClass - 관련 css-style-126
 				GNB ul li 자식 중 ul을 찾아 active 를 addClass - 관련 css-style-135
@@ -46,8 +46,8 @@
 		$("#GNB > ul > li").focusin(function () {
 			$(this).children("a").addClass("active");
 			$(this).find("ul").addClass("active");
-			$(this).parent("ul").stop().animate({ height: 264 }, 300);
-			$(this).parents().find(".GNB_sub").stop().animate({ height: 185 }, 300);
+			$(this).parent("ul").stop().animate({ height: 178 }, 300);
+			$(this).parents().find(".GNB_sub").stop().animate({ height: 142 }, 300);
 		});
 		$("#GNB > ul > li").focusout(function () {
 			$(this).children("a").removeClass("active");
@@ -96,57 +96,38 @@
 					<!-- GNB 시작 -->
 					<ul>
 						<li>
-							<a href="">1DEPTH</a>
+							<a href="">새소식</a>
 							<ul>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
+								<li><a href="">공지사항</a></li>
+								<li><a href="">이벤트</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="">1DEPTH</a>
+							<a href="">리서치</a>
 							<ul>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
+								<li><a href="">리서치목록</a></li>
+								<li><a href="">리서치 만들기</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="">1DEPTH</a>
+							<a href="">게시판</a>
 							<ul>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
+								<li><a href="">게시판 목록</a></li>
+								<li><a href="">글쓰기</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="">1DEPTH</a>
+							<a href="">데이터베이스</a>
 							<ul>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
+								<li><a href="">통계 목록</a></li>
+								<li><a href="">차트</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="">1DEPTH</a>
+							<a href="">문의</a>
 							<ul>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="">1DEPTH</a>
-							<ul>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
-								<li><a href="">2depth</a></li>
+								<li><a href="">패널신청</a></li>
+								<li><a href="">승인요청</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -161,8 +142,8 @@
 	<!-- 상단 고정 박스 끝 -->
 	<div class="bxslider">
 	<!-- keyvisual 시작 -->
-		<div><img src="visual2.png" alt="visual2"></div>
-		<div><img src="visual1.png" alt="visual1"></div>
+		<div><img src="visual1.png" alt="visual2"></div>
+		<div><img src="visual2.png" alt="visual1"></div>
 		<div><img src="visual3.png" alt="visual3"></div>
 	</div>
 	<!-- keyvisual 끝 -->
@@ -176,6 +157,11 @@
 			<div class="hot_search">박스 박스</div>
 			<div class="hot_chart">박스 박스</div>
 			<div class="playground">박스 박스</div>
+		</div>
+		<div class="ad_zone">
+			<div class="panel">
+				<a href=""><span></span></a>
+			</div>
 		</div>
 		<div class="report_area">
 			<ul>

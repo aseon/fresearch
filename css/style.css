@@ -6,6 +6,7 @@ body {
 }
 
 /* #0C4DA2 */
+
 .loading {
     position: fixed;
     left: 0;
@@ -107,24 +108,28 @@ body {
     float: right;
     width: 890px;
     height: 80px;
+    text-align: right;
     font-size: 0.875em;
 }
 
 #GNB>ul {
     height: 80px;
-    text-align: right;
+    text-align: center;
     overflow: hidden;
+    
 }
 
 #GNB>ul>li {
     display: inline-block;
+    vertical-align: top;
 }
 
 #GNB>ul>li>a {
     display: block;
-    padding: 0 43px;
+    padding: 0 53px;
     height: 80px;
     line-height: 80px;
+    font-size: 15px;
     font-weight: 600;
     background-color: #fff;
     color: rgb(80, 80, 80);
@@ -174,7 +179,8 @@ body {
     box-shadow: 0 0 0 transparent;
     border: none;
     background: transparent;
-    margin-bottom: 20px;
+    padding-top:109px;
+    margin-bottom: 5px;
 }
 
 .bx-wrapper .bx-controls-direction a {
