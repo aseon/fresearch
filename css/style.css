@@ -116,7 +116,6 @@ body {
     height: 80px;
     text-align: center;
     overflow: hidden;
-    
 }
 
 #GNB>ul>li {
@@ -179,7 +178,7 @@ body {
     box-shadow: 0 0 0 transparent;
     border: none;
     background: transparent;
-    padding-top:109px;
+    padding-top: 109px;
     margin-bottom: 5px;
 }
 
@@ -221,10 +220,9 @@ body {
     float: none;
 }
 
-
-/* 아래부터 임시 */
 #content .notice_area,
 #content .research_area,
+#content .panel,
 #content .report_area {
     clear: both;
     float: none;
@@ -232,27 +230,25 @@ body {
     margin: 0 auto;
 }
 
-#content .notice_area div,
-#content .research_area div {
+#content .notice_area .notice,
+#content .notice_area .event {
     float: left;
-    border: 1px solid #000;
+    width: 49%;
+    height: 40px;
+    overflow: hidden;
+    background-color: #fff;
 }
 
-#content .notice_area div {
-    width: 50%;
+#content .notice_area .notice .notice_rolling,
+#content .notice_area .event .event_rolling {
+    clear: both;
+    float: none;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
-#content .research_area div {
-    width: 33%;
-    height: 270px;
-}
-
-#content .report_area li {
-    display: inline-block;
-    border: 1px solid #000;
-    width: 214px;
-}
-
-#content .report_area li a {
-    display: block;
+#content .notice_area .notice li,
+#content .notice_area .event li {
+    width:100%; height:40px; line-height:40px;
 }

@@ -64,8 +64,43 @@
 			pager: true,
 			slideWidth: 1950
 		});
-	});
+		/* 
+		e가 들어간 것은 공지와 이벤트 구분을 위한 것입니다
+		var height = 높이 / num 공지의 개수를 알아보기 / max = 총 높이 move = 초기값*/ 
+		var height = $("#content .notice_area .notice").height();
+		var num = $("#content .notice_area .notice li").length;
+		var max = height * num;
+		var move = 0;
+		function noticeRolling() {
+			move += height; // move = move + height;
+			$("#content .notice_area .notice .notice_rolling").animate({ "top": -move }, 500, function () {
+				if (move >= max) {
+					$(this).css("top", 0);
+					move = 0;
+				};
+			});
+		};
+		noticeRollingOff = setInterval(noticeRolling, 2000);
+		$("#content .notice_area .notice .notice_rolling").append($("#content .notice_area .notice li").first().clone());
+		//마지막 것을 복사해서 추가
 
+		var eheight = $("#content .notice_area .event").height();
+		var nume = $("#content .notice_area .event li").length;
+		var emax = eheight * nume;
+		var emove = 0;
+		function eventRolling() {
+			emove += eheight;
+			$("#content .notice_area .event .event_rolling").animate({ "top": -emove }, 500, function () {
+				if (emove >= emax) {
+					$(this).css("top", 0);
+					emove = 0;
+				};
+			});
+		};
+		eventRollingOff = setInterval(eventRolling, 2000);
+		$("#content .notice_area .event .event_rolling").append($("#content .notice_area .event li").first().clone());
+
+	});
 </script>
 </head>
 <body>
@@ -150,19 +185,88 @@
 	<section id="content" class="clearfix">
 	<!-- 내용 시작 -->
 		<div class="notice_area">
-			<div class="notice">공지</div>
-			<div class="event">이벤트</div>
+			<div class="notice">
+				<ul class="notice_rolling">
+					<li>
+						<a href="">공지사항 <span>임시내용입니다.</span></a>
+					</li>
+					<li>
+						<a href="">공지사항 <span>2임시내용입니다.</span></a>
+					</li>
+					<li>
+						<a href="">공지사항 <span>3임시내용입니다.</span></a>
+					</li>
+					<li>
+						<a href="">공지사항 <span>4임시내용입니다.</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="event">
+				<ul class="event_rolling">
+					<li>
+						<a href="">이벤트 <span>임시내용입니다.</span></a>
+					</li>
+					<li>
+						<a href="">이벤트 <span>2임시내용입니다.</span></a>
+					</li>
+					<li>
+						<a href="">이벤트 <span>3임시내용입니다.</span></a>
+					</li>
+					<li>
+						<a href="">이벤트 <span>4임시내용입니다.</span></a>
+					</li>
+				</ul>
+			</div>
 		</div>
+		<!-- 공지 끝 / 자유게시판 외 게시판 시작 -->
 		<div class="research_area">
-			<div class="hot_search">박스 박스</div>
-			<div class="hot_chart">박스 박스</div>
-			<div class="playground">박스 박스</div>
+			<div class="playground">
+				<div class="pg_icon">
+					<img src="" alt="">
+				</div>
+				<div class="pg_text">
+					<dl>
+						<dt></dt>
+						<dd></dd>
+						<dd></dd>
+						<a href=""></a>
+					</dl>
+				</div>
+			</div>
+			<div class="hot_search">
+				<div class="search_icon">
+					<img src="" alt="">
+				</div>
+				<div class="search_text">
+					<dl>
+						<dt></dt>
+						<dd></dd>
+						<dd></dd>
+						<a href=""></a>
+					</dl>
+				</div>
+			</div>
+			<div class="hot_chart">
+				<div class="chart_icon">
+					<img src="" alt="">
+				</div>
+				<div class="chart_text">
+					<dl>
+						<dt></dt>
+						<dd></dd>
+						<dd></dd>
+						<a href=""></a>
+					</dl>
+				</div>
+			</div>
 		</div>
+		<!-- 게시판 끝 패널신청 시작 -->
 		<div class="ad_zone">
 			<div class="panel">
 				<a href=""><span></span></a>
 			</div>
 		</div>
+		<!-- 패널 끝 / 간단 리서치 시작 -->
 		<div class="report_area">
 			<ul>
 				<li><a href=""></a></li>
