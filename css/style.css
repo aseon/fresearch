@@ -37,7 +37,7 @@ body {
 
 .container .fixed_box .header .upper {
     width: 100%;
-    background-color: #888;
+    background-color: #0C4DA2;
 }
 
 .container .fixed_box .header .GNB_sub {
@@ -57,14 +57,23 @@ body {
 
 .container .fixed_box .header .upper .login ul {
     float: right;
-    width: 220px;
-    border: 1px solid #111;
+    width: 180px;
+
     /* HTML login 1, 2, 3 항목에 맞게 변경 후 border:1px solid #111; 지우기  */
 }
 
 .container .fixed_box .header .upper .login li {
     display: inline-block;
-    width: 32%;
+
+    /* 항목 3개라서 가로크기 32퍼씩 임시설정 */
+}
+
+.container .fixed_box .header .upper .login li a {
+    display: block;
+    padding: 4px 5px;
+    color: #fff;
+    font-size: 12px;
+
     /* 항목 3개라서 가로크기 32퍼씩 임시설정 */
 }
 
@@ -106,7 +115,7 @@ body {
 */
 #GNB {
     float: right;
-    width: 890px;
+    width: 840px;
     height: 80px;
     text-align: right;
     font-size: 0.875em;
@@ -179,7 +188,7 @@ body {
     border: none;
     background: transparent;
     padding-top: 109px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
 .bx-wrapper .bx-controls-direction a {
@@ -222,11 +231,16 @@ body {
 
 #content .notice_area,
 #content .research_area,
-#content .report_area {
+#content .qreserch_area {
     clear: both;
     float: none;
     width: 1100px;
     margin: 0 auto;
+}
+
+#content .notice_back {
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #d5e6e8;
 }
 
 #content .notice_area .notice,
@@ -235,7 +249,7 @@ body {
     width: 49%;
     height: 40px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #f6f6f6;
 }
 
 #content .notice_area .notice .notice_rolling,
@@ -254,11 +268,29 @@ body {
     line-height: 40px;
 }
 
+#content .notice_area .notice li a,
+#content .notice_area .event li a {
+    color: #0C4DA2;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#content .notice_area .notice li a span,
+#content .notice_area .event li a span {
+    color: #333;
+    font-weight: 400;
+}
+
+#content .research_area {
+    padding: 40px 0;
+
+}
+
 /* hot_으로 시작하는 div class > hot_search hot_chart hot_board */
 #content .research_area div[class^="hot_"] {
     float: left;
     width: 365px;
-    height: 170px;
+    height: 190px;
     border-top: 1px solid #dcdcdc;
     border-right: 1px solid #dcdcdc;
     border-bottom: 1px solid #dcdcdc;
@@ -272,8 +304,8 @@ body {
 #content .research_area div[class$="_icon"] {
     display: inline-block;
     width: 142px;
-    background: #0C4DA2;
-    /* vertical-align: middle; */
+    padding-top: 28px;
+    padding-left: 24px;
 }
 
 #content .research_area div[class$="_icon"] img {
@@ -285,6 +317,8 @@ body {
 #content .research_area div[class$="_text"] {
     display: inline-block;
     width: 198px;
+    padding-top: 28px;
+    padding-left: 18px;
 
 }
 
@@ -311,7 +345,7 @@ body {
     display: block;
     width: 70%;
     padding: 4px 0;
-    margin: 0 auto;
+    margin: 18px auto;
     font-size: 15px;
     font-weight: bold;
     color: #0C4DA2;
@@ -344,5 +378,146 @@ body {
     width: 1100px;
     height: 400px;
     margin: 0 auto;
+}
 
+#content .ad_zone .panel dl {
+    padding-top: 150px;
+    text-align: center;
+}
+
+#content .ad_zone .panel dl dt {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+
+#content .ad_zone .panel dl a {
+    display: block;
+    width: 150px;
+    padding: 4px 0;
+    margin: 10px auto;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+#content .ad_zone .panel dl a:hover,
+#content .ad_zone .panel dl a:focus {
+    display: block;
+    color: rgb(34, 105, 197);
+    background: #fff;
+}
+
+#content .qreserch_area {
+    padding: 40px 0;
+}
+
+#content .qreserch_area ul {}
+
+#content .qreserch_area li {
+    float: left;
+    width: 210px;
+    margin-right: 10px;
+    /* background: #505050; */
+
+}
+
+#content .qreserch_area li:first-child {
+    margin-right: none;
+}
+
+/* 같은 ul안에 같은 li들이지만 다른 css사용으로 퍼스트차일드 사용 */
+#content .qreserch_area li a {
+    position: relative;
+    display: block;
+    height: 250px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#content .qreserch_area li a:hover,
+#content .qreserch_area li a:focus {
+    opacity: 1;
+}
+
+#content .qreserch_area li:first-child a {
+    background: #0C4DA2;
+    opacity: 1;
+}
+
+#content .qreserch_area li:first-child a dl dt {
+    padding-left: 20px;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 0.3px;
+}
+
+#content .qreserch_area li:first-child a dl span {
+    display: block;
+
+}
+
+#content .qreserch_area li:first-child a dl dd {
+    bottom: 5px;
+    right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#content .qreserch_area dl {
+    padding-top: 18px;
+}
+
+#content .qreserch_area dl dt {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+
+}
+
+#content .qreserch_area dl dd {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    color: #888;
+
+}
+
+
+
+#footer {
+    background-color: #282828;
+    font-size: 12px;
+    color: #8c8c8c;
+    margin-top: 40px;
+}
+
+#footer .footer_inner {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 50px 10px;
+}
+
+#footer .footer_inner .footer_logo,
+#footer .footer_inner .footer_text {
+    display: inline-block;
+}
+
+#footer .footer_inner .footer_logo {
+    width: 287px;
+}
+
+#footer .footer_inner .footer_logo img {
+    width: 180px;
+}
+
+#footer .footer_inner .footer_text p a {
+    color: #dcdcdc;
+    font-weight: bold;
 }
